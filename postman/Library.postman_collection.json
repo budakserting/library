@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "b33035eb-ddec-48a6-9712-2e006c3734b8",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24658608"
+	},
+	"item": [
+		{
+			"name": "Borrower Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/borrower/add?name=Ali&email=ali@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrower",
+						"add"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ali"
+						},
+						{
+							"key": "email",
+							"value": "ali@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"9780261102736\",\r\n    \"title\":\"The Silmarillion\",\r\n    \"author\":\"J.R.R. Tolkien\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/borrow/book?bookId=37d3c4638c9711ef9d150242ac1a0002&borrowerId=37d0664f8c9711ef9d150242ac1a0002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrow",
+						"book"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "37d3c4638c9711ef9d150242ac1a0002"
+						},
+						{
+							"key": "borrowerId",
+							"value": "37d0664f8c9711ef9d150242ac1a0002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/return/book?bookId=37d3c4638c9711ef9d150242ac1a0002&borrowerId=37d0664f8c9711ef9d150242ac1a0002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"return",
+						"book"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "37d3c4638c9711ef9d150242ac1a0002"
+						},
+						{
+							"key": "borrowerId",
+							"value": "37d0664f8c9711ef9d150242ac1a0002"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
